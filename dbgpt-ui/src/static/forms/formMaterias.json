@@ -1,0 +1,27 @@
+{
+  "title": "Materias",
+  "fields": [
+    {
+      "type": "text",
+      "size": "6",
+      "value": "ID",
+      "label": "ID",
+      "auxType": "number"
+    },
+    {
+      "size":"6"
+    },
+    {
+      "type": "text",
+      "size": "6",
+      "value": "Nombre",
+      "label": "Nombre"
+    },
+    {
+      "type": "text",
+      "size": "6",
+      "value": "Descipcion",
+      "label": "Descripción"
+    }
+  ]
+}

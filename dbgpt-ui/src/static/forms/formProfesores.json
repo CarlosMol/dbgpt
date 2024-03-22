@@ -1,0 +1,30 @@
+{
+  "title": "Profesores",
+  "fields": [
+    {
+      "type": "text",
+      "size": "4",
+      "value": "ID",
+      "label": "ID",
+      "auxType": "number"
+    },
+    {
+      "type": "text",
+      "size": "4",
+      "value": "Nombre",
+      "label": "Nombre"
+    },
+    {
+      "type": "text",
+      "size": "4",
+      "value": "Apellido",
+      "label": "Apellido"
+    },
+    {
+      "type":"text",
+      "size":"4",
+      "value":"Email",
+      "label":"Email"
+    }
+  ]
+}

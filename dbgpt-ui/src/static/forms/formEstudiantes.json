@@ -1,0 +1,42 @@
+{
+  "title": "Estudiantes",
+  "fields": [
+    {
+      "type": "text",
+      "size": "4",
+      "value": "ID",
+      "label": "ID",
+      "auxType": "number"
+    },
+    {
+      "type": "text",
+      "size": "4",
+      "value": "Nombre",
+      "label": "Nombre"
+    },
+    {
+      "type": "text",
+      "size": "4",
+      "value": "Apellido",
+      "label": "Apellido"
+    },
+    {
+      "type": "date",
+      "size": "4",
+      "value": "FechaNacimiento",
+      "label": "Fecha de Nacimiento"
+    },
+    {
+      "type":"text",
+      "size":"4",
+      "value":"Direccion",
+      "label":"Direccion"
+    },
+    {
+      "type":"text",
+      "size":"4",
+      "value":"Email",
+      "label":"Email"
+    }
+  ]
+}

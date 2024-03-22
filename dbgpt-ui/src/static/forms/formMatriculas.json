@@ -1,0 +1,40 @@
+{
+    "title": "Matriculas",
+    "fields": [
+      {
+        "type": "text",
+        "size": "6",
+        "value": "ID",
+        "label": "ID",
+        "auxType": "number"
+      },
+      {
+        "type": "date",
+        "size": "6",
+        "value": "FechaMatricula",
+        "label": "Fecha Matricula"
+      },
+      {
+        "type": "text",
+        "size": "4",
+        "value": "ID_Estudiante",
+        "label": "ID Estudiante",
+        "auxType": "number"
+      },
+      {
+        "type": "text",
+        "size": "4",
+        "value": "ID_Materia",
+        "label": "ID Materia",
+        "auxType": "number"
+      },
+      {
+        "type": "text",
+        "size": "4",
+        "value": "ID_Profesor",
+        "label": "ID Profesor",
+        "auxType": "number"
+      }
+    ]
+  }
+  

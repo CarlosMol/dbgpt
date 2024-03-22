@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  express_app:
+    build: ./dbgpt-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql_db    
+    volumes:
+      - ./dbgpt-api:/app 
+
+  mysql_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: registro_academico
+      MYSQL_CHARSET: utf8mb4
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
