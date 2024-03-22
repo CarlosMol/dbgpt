@@ -25,17 +25,17 @@
     </v-row>
     <v-row justify="center" v-else>
       <v-col cols="12" sm="8" md="6">
-        <v-card>
+        <v-card style="min-width:600px">
           <v-card-text style="overflow-y: auto; min-height: 200px; max-height: 600px;">
             <div v-for="message in chatLog" :key="message.id"
               :style="'text-align:' + message.align + ';margin-bottom:20px'">
-              {{ message.text }}
+              <span style="white-space: break-spaces">{{ message.text }}</span>
             </div>
           </v-card-text>
           <v-progress-linear v-if="loading" indeterminate color="primary"></v-progress-linear>
           <v-divider v-else></v-divider>
           <v-card-actions>
-            <v-textarea v-model="newMessage" label="Type your message" rows="1"></v-textarea>
+            <v-textarea style="margin-bottom:-25px" v-model="newMessage" label="Ingresa una instrucción aquí" rows="1" filled auto-grow></v-textarea>
             <v-btn icon @click="sendMessage">
               <v-icon>mdi-send</v-icon>
             </v-btn>
@@ -87,6 +87,6 @@ export default {
       }
 
     },
-  },
+  }
 };
 </script>
