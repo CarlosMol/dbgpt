@@ -4,7 +4,8 @@ const routes = {
     profesores: "/crud/Profesores",
     materias: "/crud/Materias",
     matriculas: "/crud/Matriculas",
-    asistente: "/asistente"
+    asistente: "/asistente",
+    chat:"/chat"
   };
   
   export default routes;

@@ -1,8 +1,8 @@
 <template>
-    <v-container fluid>
+    <v-container mt-5>
         <v-row justify="center">
             <v-col cols="12" sm="8" md="6">
-                <v-card elevation="5">
+                <v-card>
                     <v-card-text style="overflow-y: auto; min-height: 200px; max-height: 600px;">
                         <div v-for="message in chatLog" :key="message.id"
                             :style="'text-align:' + message.align + ';margin-bottom:20px'">

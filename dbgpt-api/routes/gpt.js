@@ -2,13 +2,11 @@ const express = require('express');
 const router = express.Router();
 const OpenAI = require("openai");
 
-// Inicialización de la API de OpenAI con tu clave de API
+// Inicialización de la API de OpenAI 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-// Ruta para manejar las solicitudes POST a "/converse"
 router.post("/converse", async (req, res) => {
     try {
-        // Extraer el mensaje del usuario desde el cuerpo de la solicitud
         const userMessage = req.body.message;
 
         // Crear una conversación con el mensaje del usuario
@@ -38,7 +36,7 @@ router.post("/converse", async (req, res) => {
 });
 
 router.post("/chat", async (req, res) => {
-    const assistantIdToUse = "asst_vUHE2MH3uu2StNOWctae3s8E";
+    const assistantIdToUse = req.body.assistant || "asst_vUHE2MH3uu2StNOWctae3s8E";
     const userMessage = req.body.message;
     const myThread = await openai.beta.threads.create();
 
@@ -55,10 +53,10 @@ router.post("/chat", async (req, res) => {
             myThread.id,
             {
               assistant_id: assistantIdToUse,
-              instructions: "Eres un asistente diseñado para ayudar con diferentes tareas en la administracion, optimizacion y manejo de operaciones en bases de datos", // Your instructions here
+              instructions: "Eres un asistente diseñado para ayudar con diferentes tareas en la administracion, optimizacion y manejo de operaciones en bases de datos",
               tools: [
-                { type: "code_interpreter" }, // Code interpreter tool
-                { type: "retrieval" }, // Retrieval tool
+                { type: "code_interpreter" }, 
+                { type: "retrieval" },
               ],
             }
           );
@@ -86,7 +84,7 @@ router.post("/chat", async (req, res) => {
             await retrieveRun();
       
             const allMessages = await openai.beta.threads.messages.list(
-                myThread.id // Use the stored thread ID
+                myThread.id
             );
       
             // Send the response back to the front end

@@ -23,6 +23,11 @@ const menu = {
       text: "Asistente",
       route: routes.asistente,
     },
+    // {
+    //   icon: "mdi-message-text",
+    //   text: "GPT",
+    //   route: routes.chat,
+    // },
   ],
 };
 
